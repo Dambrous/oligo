@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8"/>
+{#    PER POTER UTILIZZARE BOOTSTRAP SERVE QUESTO#}
+    <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='bootstrap-italia/css/bootstrap-italia.min.css') }}"
+    />
+    <script>
+        window.__PUBLIC_PATH__ = "static/bootstrap-italia/fonts";
+    </script>
+    <script src="{{ url_for('static',filename='bootstrap-italia/js/bootstrap-italia.bundle.min.js') }}"></script>
+
+    <title>Python Gestional Courses: OLIGO</title>
+</head>
+<body>
+<div class="it-header-slim-wrapper theme-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="it-header-slim-wrapper-content">
+          <a class="d-none d-lg-block navbar-brand" href="{{url_for('index')}}">OLIGO</a>
+          <div class="nav-mobile">
+            <nav aria-label="Navigazione accessoria">
+              <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menu1b" role="button" aria-expanded="false" aria-controls="menu4">
+                <span>Ente appartenenza</span>
+                <svg class="icon" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </a>
+              <div class="link-list-wrapper collapse" id="menu1b">
+                <ul class="link-list">
+                  <li><a class="dropdown-item list-item" href="#">Link 1</a></li>
+                  <li><a class="list-item active" href="#" aria-current="page">Link 2 (Attivo)</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div class="it-header-slim-right-zone">
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Selezione lingua: lingua selezionata</span>
+                <span>ITA</span>
+                <svg class="icon d-none d-lg-block">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </a>
+              <div class="dropdown-menu">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="link-list-wrapper">
+                      <ul class="link-list">
+                        <li><a class="dropdown-item list-item" href="#"><span>ITA <span class="visually-hidden">selezionata</span></span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>ENG</span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="it-access-top-wrapper">
+              <a class="btn btn-primary btn-sm" href="#">Accedi</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% block content %} {% endblock %}
+</body>
+</html>
